@@ -6,7 +6,7 @@ Author
 --------------
 Zihang Li, lizihang00@gmail.com
   
-  Chao Wang, 
+  Chao Wang, cw1598@nyu.edu
   
   Yangpan Tao, yt724@nyu.edu
 
