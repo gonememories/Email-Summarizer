@@ -8,7 +8,7 @@ Zihang Li, lizihang00@gmail.com
   
   Chao Wang, 
   
-  Yangpan Tao
+  Yangpan Tao, yt724@nyu.edu
 
 Description
 --------------
