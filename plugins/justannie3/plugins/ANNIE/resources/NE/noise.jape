@@ -1,0 +1,9 @@
+Phase: Noise  
+Input: Token Email1
+Options: control = appelt
+ 
+Rule: simple_terms  
+({Token.kind == word, Token within Email1})  
+:new_term2  
+-->  
+:new_term2.Noise = {string = :new_term2.Token.string}

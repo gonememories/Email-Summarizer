@@ -1,0 +1,11 @@
+Phase: Boring  
+Input: Token Lookup
+Options: control = appelt
+
+Rule: Boring
+
+({Lookup.majorType == boring}):unknown
+
+-->
+:unknown.Borning =
+ {}

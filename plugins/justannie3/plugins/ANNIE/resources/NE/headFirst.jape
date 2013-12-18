@@ -1,0 +1,14 @@
+Phase: headFirst
+
+Input: Token Borning Body
+
+Options: control = appelt
+
+
+Rule: headFirst
+(
+	{Body} {Body}
+):temp
+-->
+:temp.headFirst = {rule = "headFirst"}
+

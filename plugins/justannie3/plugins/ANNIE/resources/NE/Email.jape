@@ -1,0 +1,33 @@
+Phase: Email  
+Input: Token SpaceToken 
+Options: control = appelt
+
+Rule: Email1
+(
+	{SpaceToken.kind==control}
+	({Token}|{SpaceToken.kind!=control})*
+	({Token.string=="<"})?
+	({Token})+
+	{Token.string=="@"}
+	{Token}
+	{Token.string=="."}
+	{Token}
+	({Token.string==">"})?
+	({Token}|{SpaceToken.kind!=control})*
+):Email1
+-->
+:Email1.Email1 = {rule="Emails"}
+
+
+Rule: Junk
+(
+	{SpaceToken.kind==control}
+	({Token.string=="Sent"}|
+	 {Token.string=="To"}|
+	 {Token.string=="Subject"}|
+	 {Token.string=="Date"})
+	 {Token.string==":"}
+	 ({Token}|{SpaceToken.kind!=control})*
+):Junk
+-->
+:Junk.Junk = {rule="Junks"}

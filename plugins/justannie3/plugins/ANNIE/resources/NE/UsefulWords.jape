@@ -1,0 +1,18 @@
+Phase: UsefulWords  
+Input: Token Email1 Quote Junk Break Borning Date
+Options: control = appelt
+ 
+Rule: simple_terms
+(
+	{
+		Token.kind == word,
+		Token notWithin Email1, 
+		Token notWithin Quote, 
+		Token notWithin Break, 
+		Token notWithin Junk,
+		Token notWithin Borning,
+		Token notWithin Date
+	}
+):UsefulWords
+-->
+:UsefulWords.UsefulWords={string = :UsefulWords.Token.string}

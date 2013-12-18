@@ -1,0 +1,16 @@
+Phase: Quote  
+Input: Token SpaceToken
+Options: control = appelt
+
+Rule: Quote
+(
+	{Token.string == "["}
+	{Token.string == "Quoted"}
+	({SpaceToken.kind!=control})+
+	{Token.string == "text"}
+	({SpaceToken.kind!=control})+
+	{Token.string == "hidden"}
+	{Token.string == "]"}
+):Quote
+-->
+:Quote.Quote = {}

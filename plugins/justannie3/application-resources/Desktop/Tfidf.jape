@@ -1,0 +1,16 @@
+Phase:Tfidf
+Input: Token Lookup NounChunk
+Options: control = appelt
+
+
+
+Rule: Tfidf
+(
+  {
+	NounChunk contains {Lookup.majorType == tfidf},
+	NounChunk contains {UsefulWords}
+  }
+):unknown
+
+-->
+:unknown.Tfidf = {}
